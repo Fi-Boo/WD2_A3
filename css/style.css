@@ -1,0 +1,182 @@
+/* BASIC UNIVERSAL STYLING & CLEAN UP */
+/* some basic css resetting */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;      
+    list-style: none;
+    text-decoration: none;
+}
+
+
+:root {
+    --header-height: 5rem;
+    --color-brown: #5A4034;
+    --color-beige: #d9c5ad;
+    --color-white: #F9F5F2;
+    --color-gold: #C7A95A;
+    --color-black: #1C1C1C;
+}
+
+.centre {
+    margin: 0 auto;
+}
+
+
+.font-raleway {
+  font-family: "Raleway", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+body {
+    background-color: var(--color-beige);
+}
+
+main {
+    width: 100%;
+    z-index: -10;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: var(--header-height);
+    overflow-y: hidden;
+    z-index: 1;
+}
+
+#header-background {
+    width: 100%;
+    height: var(--header-height);
+    background: var(--color-white);
+    position: absolute;
+    top: calc(var(--header-height) * -1);
+    transition: all 0.2s ease-in;
+    z-index: -5;
+    box-shadow: 0px 0px 15px 15px rgb(1,1,1,0.5);
+}
+
+header:hover #header-background {
+    top: -0.25rem;
+}
+
+.container-max-width {
+    max-width: 1300px;
+    width: 100%;
+    height: 100%;
+}
+
+#nav-links {
+    display: flex;
+    justify-content: right;
+    width: 50%;
+    margin-left: auto;
+}
+
+#nav-links li {
+    width: 10rem;
+    text-align: center;
+    margin: 0 1rem;
+    padding: 0.5rem 0;
+    align-content: center;
+}
+
+nav {
+    position: relative;
+    height: 100%;
+    display: flex;
+}
+
+#companylogo {
+    height: var(--header-height);
+    position: absolute;
+    top: 0;
+    left: 2rem; 
+}
+
+img {
+    height: 100%;
+}
+
+/* https://css-irl.info/animating-underlines/ */
+
+#nav-links li a {
+    display: block;
+    position: relative;
+    padding: 0.2rem 0;
+    color: inherit;
+}
+
+#nav-links li a::after {
+  opacity: 1;
+  transform: scale(0);
+  transform-origin: center;
+  content: '';
+  position: absolute;
+  left: 10%;
+  bottom: -0.5rem;
+  width: 80%;
+  height: 0.2rem;
+  background-color: var(--color-brown);
+  transition: opacity 0.25s, transform 0.25s;
+}
+
+#nav-links li a:hover::after,
+#nav-links li a:focus::after{
+  transform: scale(1);
+}
+
+
+#section-background {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    background: var(--color-white); 
+}
+
+#section-background img:first-child {
+    opacity: 0.15;
+    position: absolute;
+    right:-40%;
+    top:-50%;
+}
+
+#section-background img:last-child {
+    opacity: 0.15;
+    position: absolute;
+    left:-32.5%;
+    bottom:-40%;
+}
+
+
+#section-home {
+    background-image: url(../images/home-bg.jpeg);
+    background-size: cover;
+    background-position: 35% 50%;
+    height: 100vh;
+    width: 100%;
+    position:relative;
+    box-shadow: 0px 0px 15px 15px rgb(1,1,1,0.5);
+}
+
+#section-application {
+    min-height: 100vh;
+    width: 100%;
+    background: transparent;
+    position: relative;
+    padding-top: var(--header-height);
+}
+
+#section-range {
+    min-height: 100vh;
+    height: 100vh;
+    width: 100%;
+    background: var(--color-beige);
+    position: relative;
+    box-shadow: 0px 0px 15px 15px rgb(1,1,1,0.5);
+}
+
