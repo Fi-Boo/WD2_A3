@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
     <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.1/cdn/shoelace-autoloader.js"></script>
+    <script src="https://kit.fontawesome.com/cabb777f28.js" crossorigin="anonymous"></script>
     <title>Ailey DIY Lashes</title>
 </head>
 <body>
@@ -18,9 +19,9 @@
         <div class="container-max-width centre">
             <nav>
                 <div id="companylogo">
-                    <a href=""><img src="images/ailey-logo-blk.png" /></a>
+                    <a href=""><img src="images/ailey-logo-blk.png" alt=""/></a>
                 </div>
-                <ul id="nav-links" class="font-raleway">
+                <ul id="nav-links">
                     <li><a href="">APPLICATION</a></li>
                     <li><a href="">RANGE</a></li>
                     <li><a href="">STORE</a></li>
@@ -37,15 +38,101 @@
         </section>
         <section id="section-application">
             <div class="container-max-width centre">
+                <h2>Salon Quality Lashes in 6 Easy Steps!</h2>
+                <div id="application-thumbnails">
+                    <div class="container-thumbnail">
+                    </div>
+                    <div class="container-thumbnail">
+                    </div>
+                    <div class="container-thumbnail">
+                    </div>
+                    <div class="container-thumbnail">
+                    </div>
+                    <div class="container-thumbnail">
+                    </div>
+                    <div class="container-thumbnail">
+                    </div>
+                </div>
+                <div id="thumbnail-description">
+                </div>
+                <div id="application-video" class="centre">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/w7Gdpxofh6c?si=-NAMH3ij82GWvND6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
             </div>
         </section>
         <section id="section-range">
+            <div class="section-bg">
+                <img src="images/eye-bg.jpeg" alt=""/>
+            </div>
+            <div class="container-max-width centre">
+                <h2>Product Range</h2>
+                <div id="container-range" class="centre">
+                </div>
+            </div>
         </section>
         <section id="section-testimonials">
+            <div class="container-max-width centre">
+                <h2>Why choose Ailey DIY Lashes?</h2>
+                <div id="container-testimonial" class="centre">
+                    <div id="testimonial-carousel">
+                        <div class="testimonial">
+                            <span class="testimonial-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto sunt odio ipsum, quaerat molestias, doloremque architecto fugit aut maxime non modi repellat corporis ex eos libero dolor asperiores. Quisquam, ipsa.</span>
+                            <div class="testimonial-user">
+                                <div class="testimonial-img"></div>
+                                <span class="testimonial-name"><strong>name</strong></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section id="section-contactus">
+            <div class="section-bg">
+                    <img src="images/eye-bg.jpeg" alt=""/>
+            </div>
+            <div class="container-max-width centre">
+                <form id="contactus-form" action="">
+                    <h2>Contact Us</h2>
+                    <span>Have a question or some feedback?</span>
+                    <span>We'd love to hear from you</span>
+                    <input type="text" placeholder="Your Name" class="contact-input" required>
+                    <input type="email" placeholder="Your Email" class="contact-input" required>
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="subscribe" name="subscribe">
+                        <label for="subscribe"> Subscribe to newsletter </label>
+                    </div>
+                    <textarea name="message" placeholder="Your Message" class="contact-input" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </span>
         </section>  
+
     </main>
-    <sl-button> click me </sl-button>
+    <footer>
+        <div id="footer-flex" class="container-max-width centre">
+            <div id="footer-links">
+                <ul>
+                    <li><a href=""> Application Guide </a></li>
+                    <li><a href=""> Product Range </a></li>
+                    <li><a href=""> Testimonials </a></li>
+                    <li><a href=""> Contact Us </a></li>
+                </ul>
+                <div class="footer-logo">
+                    <img src="images/ailey-logo2-wht.png" alt="Ailey business logo"/>
+                </div>
+            </div>
+            <div id="footer-socials">
+                <h3> Follow us at: </h3>
+                <div id="socials-links">
+                    <i class="fa-brands fa-facebook" ></i>
+                    <i class="fa-brands fa-instagram" ></i>
+                    <i class="fa-brands fa-tiktok" ></i>
+                    <i class="fa-brands fa-youtube" ></i>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <span> ©Vivid Lash Boutique 2025  (Phi Van Lam Bui 21905474)</span>
+    </footer>
 </body>
 </html>
