@@ -9,7 +9,6 @@
     text-decoration: none;
 }
 
-
 :root {
     --header-height: 5rem;
     --color-brown: #5A4034;
@@ -24,12 +23,15 @@
     margin: 0 auto;
 }
 
-
 .font-raleway {
   font-family: "Raleway", serif;
   font-optical-sizing: auto;
   font-weight: 900;
   font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -40,12 +42,20 @@ body {
     font-style: normal;
     color: var(--color-brown);
     overflow-x: hidden;
+    font-size: 1.5rem;
 }
 
 main {
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     z-index: -10;
+    overflow-x: hidden;
 }
+
+/*
+    HEADER
+    navigation and logo
+*/
 
 header {
     position: fixed;
@@ -60,8 +70,9 @@ header {
     width: 100%;
     height: var(--header-height);
     background: var(--color-white);
+    opacity: 75%;
     position: absolute;
-    top: calc(var(--header-height) * -1);
+    top: 0;
     transition: all 0.2s ease-in;
     z-index: -5;
     box-shadow: 0px 0px 15px 15px rgb(1,1,1,0.5);
@@ -100,9 +111,9 @@ nav {
 }
 
 #companylogo {
-    height: var(--header-height);
+    height: calc(var(--header-height) * 1.5);
     position: absolute;
-    top: 0;
+    top: -1.25rem;
     left: 2rem; 
 }
 
@@ -137,6 +148,33 @@ img {
 #nav-links li a:focus::after{
   transform: scale(1);
 }
+
+
+#section-home h1 {
+    font-size: 6rem;
+    font-weight:900;
+    text-align: right;
+    color: var(--color-brown);
+    text-shadow: 2px 2px 2px var(--color-shadow);
+}
+
+#home-text {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-right: 4rem;
+}
+
+
+/*
+
+
+
+
+*/
+
+
+
 
 
 #section-background {
@@ -182,42 +220,59 @@ img {
 
 #section-range {
     min-height: 100vh;
-    height: 100vh;
     width: 100%;
     background: var(--color-beige);
     position: relative;
     box-shadow: 0px 0px 10px 10px rgb(1,1,1,0.5);
 }
 
-#section-testimonials {
-    border: 1px solid blue;
-    
-}
 
 h2 {
-    padding: calc(var(--header-height) + 4rem) 0;
+    padding: calc(var(--header-height) + 4rem) 0 var(--header-height);
     font-size: 3rem;
     color: var(--color-brown);
     text-shadow: 2px 2px 2px var(--color-shadow);
     text-align: center;  
 }
 
-#application-thumbnails {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    margin: 1rem;
-    padding: 1rem; 
-    height: fit-content;
+.tutorial-tabs {
+    width: 100%;
+    margin: 0 auto;
 }
 
-#thumbnail-description {
-    padding: 2rem;
-    margin: 2rem auto 3rem;
+.tutorial-tabs::part(active-tab-indicator) {
+    --indicator-color: none;
+    height: 0;
+    border: 0;
+}
+
+.tutorial-tabs::part(body) {
+    border: 0;
     width: 75%;
-    border: 1px solid blue;
-
+    margin: 0 auto;
+    padding: 0 1rem;
+    line-height: 2rem;
+    min-height: fit-content;
+    height: 16.5rem;
 }
+
+.tutorial-table tr th {
+    width: 8rem;
+    align-content: top;
+    display: flex;
+    align-items: top;
+    justify-content: right;
+    padding-right: 2rem;
+}
+
+.tutorial-table tr td {
+    padding-bottom: 1rem;
+}
+
+.tutorial-tabs::part(nav) {
+    margin: 0 auto;
+}
+
 
 .container-thumbnail {
     height: 7.5rem;
@@ -229,8 +284,15 @@ h2 {
     transition: transform 0.2s ease-in;
 }
 
+.tutorial-tabs sl-tab[active] .container-thumbnail {
+    transform:scale(1.2);
+    box-shadow: 0px 0px 3px var(--color-gold);
+    border: 2px solid var(--color-gold);
+}
+
 .container-thumbnail:hover {
-    transform: scale(1.2);
+    box-shadow: 0px 0px 3px var(--color-shadow);
+
 }
 
 #application-video {
@@ -244,6 +306,7 @@ iframe {
     height: 100%;
     border-radius: 10px;
     box-shadow: 3px 3px 3px var(--color-shadow);
+    margin-bottom: 3rem;
 }
 
 .section-bg img {
@@ -262,13 +325,7 @@ iframe {
 }
 
 #section-contactus div img {
-    top: -8rem;
     left: -8%;
-}
-
-section .container-max-width {
-    max-width: 1300px;
-    position: relative;
 }
 
 #container-testimonial {
@@ -363,6 +420,11 @@ input[type=text], input[type=email], select, textarea, label {
     height: 2.5rem;
     align-content: center;
     border-radius: 10px;
+    font-family: "Raleway", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--color-brown);
 }
 
 textarea {
@@ -396,6 +458,10 @@ hr {
     border: 1.5px solid var(--color-white);
     width: 50vw;
     margin: 0 auto 1rem;
+}
+
+footer {
+    padding-top: 4rem;
 }
 
 footer span {
@@ -443,10 +509,12 @@ h3 {
     color: var(--color-white);
 }
 
-a:visited, a:active {
+a, a:visited, a:active {
     color:inherit;
 }
 
 a:hover, #socials-links i:hover {
     color: var(--color-gold);
 }
+
+

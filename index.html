@@ -22,8 +22,8 @@
                     <a href=""><img src="images/ailey-logo-blk.png" alt=""/></a>
                 </div>
                 <ul id="nav-links">
-                    <li><a href="">APPLICATION</a></li>
-                    <li><a href="">RANGE</a></li>
+                    <li><a href="#section-application">APPLICATION</a></li>
+                    <li><a href="#section-range">RANGE</a></li>
                     <li><a href="">STORE</a></li>
                 </ul>
             </nav>
@@ -35,26 +35,99 @@
             <img src="images/ailey-logo-blk.png" />
         </section>
         <section id="section-home">
+            <div id="home-text" class="container-max-width centre">
+                <h1>Your Lashes<br>
+                Your Way</h1>
+            </div>
         </section>
         <section id="section-application">
             <div class="container-max-width centre">
                 <h2>Salon Quality Lashes in 6 Easy Steps!</h2>
-                <div id="application-thumbnails">
-                    <div class="container-thumbnail">
-                    </div>
-                    <div class="container-thumbnail">
-                    </div>
-                    <div class="container-thumbnail">
-                    </div>
-                    <div class="container-thumbnail">
-                    </div>
-                    <div class="container-thumbnail">
-                    </div>
-                    <div class="container-thumbnail">
-                    </div>
-                </div>
-                <div id="thumbnail-description">
-                </div>
+
+                <sl-tab-group class="tutorial-tabs">
+                    <sl-tab slot="nav" panel="step1"><div class="container-thumbnail">
+                    </div></sl-tab>
+                    <sl-tab slot="nav" panel="step2"><div class="container-thumbnail">
+                    </div></sl-tab>
+                    <sl-tab slot="nav" panel="step3"><div class="container-thumbnail">
+                    </div></sl-tab>
+                    <sl-tab slot="nav" panel="step4"><div class="container-thumbnail">
+                    </div></sl-tab>
+                    <sl-tab slot="nav" panel="step5"><div class="container-thumbnail">
+                    </div></sl-tab>
+                    <sl-tab slot="nav" panel="step6"><div class="container-thumbnail">
+                    </div></sl-tab>
+
+                    <sl-tab-panel name="step1">
+                        <table class="tutorial-table">
+                            <tr>
+                                <th>STEP 1 :</th>
+                                <td>Ensure the natural lashes are clean, dry and free of makeup/remover residue. Use a lash scurler to gently curl your lashes.</td>
+                            </tr>
+                            <tr>
+                                <th>TIP :</th>
+                                <td><em>Clean lashes provide the strongest hold. Only a gentle crimp is necessary to allow easy access to the under-lash line.</em></td>
+                            </tr>
+                        </table>
+                    </sl-tab-panel>
+                    <sl-tab-panel name="step2">
+                        <table class="tutorial-table">
+                            <tr>
+                                <th>STEP 2 :</th>
+                                <td>Gently remove the lash segments from the tray. Have all the selected segments trimmed, lined in styling order, and ready to go.</td>
+                            </tr>
+                            <tr>
+                                <th>TIP :</th>
+                                <td><em>The Sticky Lash Pad is a great tool to hold your segments in place during application.</em></td>
+                            </tr>
+                        </table>
+                    </sl-tab-panel>
+                    <sl-tab-panel name="step3">
+                        <table class="tutorial-table">
+                            <tr>
+                                <th>STEP 3 :</th>
+                                <td>Apply the Bond to the underside of your natural lashes, focusing on the roots to mid-lengths. Avoid the tips for a seamless look. Allow 20 secs for the Bond to become tacky.</td>
+                            </tr>
+                            <tr>
+                                <th>TIP :</th>
+                                <td><em>For a better view of your under-lash line, position a mirror from below and angle it slightly towards the ceiling.</em></td>
+                            </tr>
+                        </table>
+                    </sl-tab-panel>
+                    <sl-tab-panel name="step4">
+                        <table class="tutorial-table">
+                            <tr>
+                                <th>STEP 4 :</th>
+                                <td>Starting from the outer corner, carefully place a segment to the underside of your natural lashes and work inwards. Attach 1-2mm from the lash line and inner/outer corners. Gently touching the segments to the Bond will allow repositioning if needed before fusing.</td>
+                            </tr>
+                            <tr>
+                                <th>TIP :</th>
+                                <td><em>If you feel any discomfort, you may have applied too close to the lash line/corners. Adjust before fusing.</em></td>
+                            </tr>
+                        </table>
+                    </sl-tab-panel>
+                    <sl-tab-panel name="step5">
+                        <table class="tutorial-table">
+                            <tr>
+                                <th>STEP 5 :</th>
+                                <td>After checking the lash placement on both eyes, use the Application Tweezers or fingers to clamp and fuse the segments to the natural lashes. Slowly and gently release the hold as the Bond is still activated and sticky</td>
+                            </tr>
+                        </table>
+                    </sl-tab-panel>
+                    <sl-tab-panel name="step6">
+                        <table class="tutorial-table">
+                            <tr>
+                                <th>STEP 6 :</th>
+                                <td>Apply the Sealant to lock in the bond and remove excess stickiness. Focus only where the Bond has been applied, avoiding the tips of the lashes. Allow the Sealant to fully dry before applying other makeup.</td>
+                            </tr>
+                            <tr>
+                                <th>TIP :</th>
+                                <td><em>Avoid contact with water for the first 24hrs.</em></td>
+                            <table/r>
+                        </table>
+                    </sl-tab-panel>
+                </sl-tab-group>
+
                 <div id="application-video" class="centre">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/w7Gdpxofh6c?si=-NAMH3ij82GWvND6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
@@ -62,12 +135,11 @@
         </section>
         <section id="section-range">
             <div class="section-bg">
-                <img src="images/eye-bg.jpeg" alt=""/>
+                <img src="images/eye-bg.png" alt=""/>
             </div>
             <div class="container-max-width centre">
                 <h2>Product Range</h2>
-                <div id="container-range" class="centre">
-                </div>
+                <div id="container-range" class="centre"></div>
             </div>
         </section>
         <section id="section-testimonials">
@@ -88,7 +160,7 @@
         </section>
         <section id="section-contactus">
             <div class="section-bg">
-                    <img src="images/eye-bg.jpeg" alt=""/>
+                    <img src="images/eye-bg.png" alt=""/>
             </div>
             <div class="container-max-width centre">
                 <form id="contactus-form" action="">
@@ -112,10 +184,10 @@
         <div id="footer-flex" class="container-max-width centre">
             <div id="footer-links">
                 <ul>
-                    <li><a href=""> Application Guide </a></li>
-                    <li><a href=""> Product Range </a></li>
-                    <li><a href=""> Testimonials </a></li>
-                    <li><a href=""> Contact Us </a></li>
+                    <li><a href="#section-application"> Application Guide </a></li>
+                    <li><a href="#section-range"> Product Range </a></li>
+                    <li><a href="#section-testimonials"> Testimonials </a></li>
+                    <li><a href="#section-contactus"> Contact Us </a></li>
                 </ul>
                 <div class="footer-logo">
                     <img src="images/ailey-logo2-wht.png" alt="Ailey business logo"/>
