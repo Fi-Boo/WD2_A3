@@ -7,9 +7,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css" />
+    
     <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.1/cdn/shoelace-autoloader.js"></script>
     <script src="https://kit.fontawesome.com/cabb777f28.js" crossorigin="anonymous"></script>
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
     <title>Ailey DIY Lashes</title>
 </head>
 <body>
@@ -146,15 +152,63 @@
             <div class="container-max-width centre">
                 <h2>Why choose Ailey DIY Lashes?</h2>
                 <div id="container-testimonial" class="centre">
-                    <div id="testimonial-carousel">
+                    
+                    <!-- Slider main container -->
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <div class="testimonial">
+                                    <span class="testimonial-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto sunt odio ipsum, quaerat molestias, doloremque architecto fugit aut maxime non modi repellat corporis ex eos libero dolor asperiores. Quisquam, ipsa.</span>
+                                    <div class="testimonial-user">
+                                        <div class="testimonial-img"></div>
+                                        <span class="testimonial-name"><strong>name</strong></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="testimonial">
+                                    <span class="testimonial-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto sunt odio ipsum, quaerat molestias, doloremque architecto fugit aut maxime non modi repellat corporis ex eos libero dolor asperiores. Quisquam, ipsa.</span>
+                                    <div class="testimonial-user">
+                                        <div class="testimonial-img"></div>
+                                        <span class="testimonial-name"><strong>name</strong></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="testimonial">
+                                    <span class="testimonial-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto sunt odio ipsum, quaerat molestias, doloremque architecto fugit aut maxime non modi repellat corporis ex eos libero dolor asperiores. Quisquam, ipsa.</span>
+                                    <div class="testimonial-user">
+                                        <div class="testimonial-img"></div>
+                                        <span class="testimonial-name"><strong>name</strong></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+                    </div>
+
+
+
+
+
+                    <!-- <div id="testimonial-carousel">
                         <div class="testimonial">
                             <span class="testimonial-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto sunt odio ipsum, quaerat molestias, doloremque architecto fugit aut maxime non modi repellat corporis ex eos libero dolor asperiores. Quisquam, ipsa.</span>
                             <div class="testimonial-user">
                                 <div class="testimonial-img"></div>
                                 <span class="testimonial-name"><strong>name</strong></span>
                             </div>
-                        </div>
-                    </div>
+                        </div> -->
+
                 </div>
             </div>
         </section>
