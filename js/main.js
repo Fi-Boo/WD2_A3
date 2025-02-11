@@ -1,5 +1,4 @@
 
-
 document.addEventListener("DOMContentLoaded", function() {
 
     let navBackground = document.querySelector("#header-background");
@@ -25,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
             navBackground.style.top = 'calc(var(--header-height) * -1)';
         }  
     })
+
 });
 
 
@@ -50,6 +50,18 @@ const swiper = new Swiper('.swiper', {
     },
 
     autoplay: {
-        delay: 7000,
+        delay: 5000,
     },
 });
+
+
+const dialogSubscribe = document.querySelector('.dialog-subscribe');
+const dialogConfirm = document.querySelector('.dialog-added');
+const subscribeButton = dialogSubscribe.querySelector('form button');
+
+subscribeButton.addEventListener('click', () => {
+    dialogSubscribe.hide();
+    dialogConfirm.show();
+
+});
+

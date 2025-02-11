@@ -10,11 +10,14 @@
     
     <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.1/cdn/shoelace-autoloader.js"></script>
     <script src="https://kit.fontawesome.com/cabb777f28.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
         />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
     <link rel="stylesheet" href="css/style.css" />
     <title>Ailey DIY Lashes</title>
 </head>
@@ -40,6 +43,17 @@
             <img src="images/ailey-logo-blk.png" />
             <img src="images/ailey-logo-blk.png" />
         </section>
+        <section id="test">
+        <sl-dialog label="" class="dialog-subscribe" open>
+            Join our mailing list for updates on our products and guides!
+            <form id="subscribe" action="">
+                <input type="email" placeholder="Your Email" required></input>
+                <button type="button">Subscribe</button>
+            </form>
+        </sl-dialog>
+        <sl-dialog label="" class="dialog-added">
+            Your email has been successfully added to our mailing list. 
+        </sl-dialog>
         <section id="section-home">
             <div id="home-text" class="container-max-width centre">
                 <h1>Your Lashes<br>
@@ -51,19 +65,36 @@
                 <h2>Salon Quality Lashes in 6 Easy Steps!</h2>
 
                 <sl-tab-group class="tutorial-tabs">
-                    <sl-tab slot="nav" panel="step1"><div class="container-thumbnail">
-                    </div></sl-tab>
-                    <sl-tab slot="nav" panel="step2"><div class="container-thumbnail">
-                    </div></sl-tab>
-                    <sl-tab slot="nav" panel="step3"><div class="container-thumbnail">
-                    </div></sl-tab>
-                    <sl-tab slot="nav" panel="step4"><div class="container-thumbnail">
-                    </div></sl-tab>
-                    <sl-tab slot="nav" panel="step5"><div class="container-thumbnail">
-                    </div></sl-tab>
-                    <sl-tab slot="nav" panel="step6"><div class="container-thumbnail">
-                    </div></sl-tab>
-
+                    <sl-tab slot="nav" panel="step1">
+                        <div class="container-thumbnail">
+                            <img src="images/Step_1.png" alt="eye with no lashe extensions">
+                        </div>
+                    </sl-tab>
+                    <sl-tab slot="nav" panel="step2">
+                        <div class="container-thumbnail">
+                            <img src="images/Step_2.png" alt="lash clusters in preparation of application">
+                        </div>
+                    </sl-tab>
+                    <sl-tab slot="nav" panel="step3">
+                        <div class="container-thumbnail">
+                            <img src="images/Step_3.png" alt="application of bond agent to lashes via a lash brush">
+                        </div>
+                    </sl-tab>
+                    <sl-tab slot="nav" panel="step4">
+                        <div class="container-thumbnail">
+                            <img src="images/Step_4.png" alt="lash cluster being placed on eye lashes">
+                        </div>
+                    </sl-tab>
+                    <sl-tab slot="nav" panel="step5">
+                        <div class="container-thumbnail">
+                            <img src="images/Step_5.png" alt="clamping lash clusters onto the eye lashes with a the Application Tweezers">
+                        </div>
+                    </sl-tab>
+                    <sl-tab slot="nav" panel="step6">
+                        <div class="container-thumbnail">
+                            <img src="images/Step_6.png" alt="application of sealant to lash clusters via lash brush">
+                        </div>  
+                    </sl-tab>
                     <sl-tab-panel name="step1">
                         <table class="tutorial-table">
                             <tr>
@@ -145,14 +176,65 @@
             </div>
             <div class="container-max-width centre">
                 <h2>Product Range</h2>
-                <div id="container-range" class="centre"></div>
+                <div id="container-range" class="centre">
+                    <div id="container-range-starter">
+                        <h3>THE STARTER</h3>
+                        <span> For the new DIY Lasher</span>
+                        <div class="range-image">
+                            <img src="" alt="">
+                        </div>
+                        <span class="span-content">This kit comes with everythign required for 2 applications</span>
+                        <table>
+                            <tr>
+                                <th>Accessories</th>
+                                <th>Clusters </th>
+                            </tr>
+                            <tr>
+                                <td>1 x Bonder/Sealant</td>
+                                <td>10x10mm</td>
+                            </tr>
+                            <tr>
+                                <td>1 x Lash Tweezers</td>
+                                <td>10x12mm</td>
+                            </tr>
+                            <tr>
+                                <td>1 x Remover Gel</td>
+                                <td>10x14mm</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="container-range-expansion">
+                        <h3>EXPANSIONS</h3>
+                        <span> For Experienced DIYers who want a particular look</span>
+                        <div class="range-expansion-images">
+                            <div class="range-image">
+                                <img src="images/Step_1.png" alt="eye with no lashe extensions">
+                            </div>
+                            <div class="range-image">
+                                <img src="images/Step_2.png" alt="lash clusters in preparation of application">
+                            </div>
+                            <div class="range-image">
+                                <img src="images/Step_3.png" alt="application of bond agent to lashes via a lash brush">
+                            </div>
+                            <div class="range-image">
+                                <img src="images/Step_4.png" alt="lash cluster being placed on eye lashes">
+                            </div>
+                            <div class="range-image">
+                                <img src="images/Step_5.png" alt="clamping lash clusters onto the eye lashes with a the Application Tweezers">
+                            </div>
+                            <div class="range-image">
+                                <img src="images/Step_6.png" alt="application of sealant to lash clusters via lash brush">
+                            </div>
+                        </div>
+                        <span class="span-content">These kits contain ONLY Lash Clusters</span>
+                    </div>
+                </div>
             </div>
         </section>
         <section id="section-testimonials">
             <div class="container-max-width centre">
                 <h2>Why choose Ailey DIY Lashes?</h2>
-                <div id="container-testimonial" class="centre">
-                    
+                <div id="container-testimonial" class="centre"> 
                     <!-- Slider main container -->
                     <div class="swiper">
                         <!-- Additional required wrapper -->
@@ -160,28 +242,28 @@
                             <!-- Slides -->
                             <div class="swiper-slide">
                                 <div class="testimonial">
-                                    <span class="testimonial-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto sunt odio ipsum, quaerat molestias, doloremque architecto fugit aut maxime non modi repellat corporis ex eos libero dolor asperiores. Quisquam, ipsa.</span>
+                                    <span class="testimonial-content">Absolutely LOVE the lashes! I've been wanting to try these DIY for ages and I'm so glad I did. Now I can have fantastic lashes whenever, where ever I go. Definitely recommend these!</span>
                                     <div class="testimonial-user">
-                                        <div class="testimonial-img"></div>
-                                        <span class="testimonial-name"><strong>name</strong></span>
+                                        <div class="testimonial-img"><img src="images/Jane_S.jpeg" alt="profile image for Jane S"></div>
+                                        <span class="testimonial-name"><strong>Jane S [2024]</strong></span>
                                     </div>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="testimonial">
-                                    <span class="testimonial-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto sunt odio ipsum, quaerat molestias, doloremque architecto fugit aut maxime non modi repellat corporis ex eos libero dolor asperiores. Quisquam, ipsa.</span>
+                                    <span class="testimonial-content">Big fan of these. I've been using them for weeks and they feel and look almost as good as the salon applied ones. I just don't have the time to go to a salon and have them topped every few weeks. I love that I can do these at home.f</span>
                                     <div class="testimonial-user">
-                                        <div class="testimonial-img"></div>
-                                        <span class="testimonial-name"><strong>name</strong></span>
+                                        <div class="testimonial-img"><img src="images/Laura_K.jpeg" alt="profile image for Laura K"></div>
+                                        <span class="testimonial-name"><strong>Laura K [2024]</strong></span>
                                     </div>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="testimonial">
-                                    <span class="testimonial-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto sunt odio ipsum, quaerat molestias, doloremque architecto fugit aut maxime non modi repellat corporis ex eos libero dolor asperiores. Quisquam, ipsa.</span>
+                                    <span class="testimonial-content">Whoever invented these are a genius! So much cheaper and easier to maintain than salon applied lashes, but SO much better and lighter than strip lashes. Definitely worth every dollar. </span>
                                     <div class="testimonial-user">
-                                        <div class="testimonial-img"></div>
-                                        <span class="testimonial-name"><strong>name</strong></span>
+                                        <div class="testimonial-img"><img src="images/Samantha_L.jpeg" alt="profile image for Samantha L"></div>
+                                        <span class="testimonial-name"><strong>Samantha L [2024]</strong></span>
                                     </div>
                                 </div>
                             </div>
@@ -195,20 +277,6 @@
                         <div class="swiper-button-next"></div>
 
                     </div>
-
-
-
-
-
-                    <!-- <div id="testimonial-carousel">
-                        <div class="testimonial">
-                            <span class="testimonial-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto sunt odio ipsum, quaerat molestias, doloremque architecto fugit aut maxime non modi repellat corporis ex eos libero dolor asperiores. Quisquam, ipsa.</span>
-                            <div class="testimonial-user">
-                                <div class="testimonial-img"></div>
-                                <span class="testimonial-name"><strong>name</strong></span>
-                            </div>
-                        </div> -->
-
                 </div>
             </div>
         </section>
@@ -224,8 +292,7 @@
                     <input type="text" placeholder="Your Name" class="contact-input" required>
                     <input type="email" placeholder="Your Email" class="contact-input" required>
                     <div class="form-checkbox">
-                        <input type="checkbox" id="subscribe" name="subscribe">
-                        <label for="subscribe"> Subscribe to newsletter </label>
+                        <sl-switch> Subscribe to newletter </sl-switch>
                     </div>
                     <textarea name="message" placeholder="Your Message" class="contact-input" required></textarea>
                     <button type="submit">Submit</button>
@@ -260,6 +327,7 @@
         <hr>
         <span> ©Vivid Lash Boutique 2025  (Phi Van Lam Bui 21905474)</span>
     </footer>
+    
     <script src="js/main.js" defer></script>
 </body>
 </html>
