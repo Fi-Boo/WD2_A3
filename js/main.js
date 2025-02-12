@@ -1,4 +1,6 @@
-
+// this logic is for the nav bar. 
+// It allows the navbars background to slide offscreen when the user scrolls down. This presents more visual space. 
+// I was having issues with it and a post suggested ensuring that all DOM content was loaded before running the logic.
 document.addEventListener("DOMContentLoaded", () => {
 
     alterTabsDirection(window.innerWidth);
@@ -22,6 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    // I had to add this mouseover/mouseout logic as CSS :hover wasn't working due to the above code.
+
     let header = document.querySelector("header");
 
     header.addEventListener("mouseover", () => {
@@ -34,18 +38,17 @@ document.addEventListener("DOMContentLoaded", () => {
         }  
     })
 
-    alterTabsDirection(window.innerWidth);
-
 });
 
 
-
+// event listener that runs whenever a screen resize happens. It calls the function that changes the tab panel layout
 window.addEventListener("resize", () => {
 
     alterTabsDirection(window.innerWidth);
 })
 
 
+// function that changes the tab placement for the tutorial tab panels based on screen width.
 function alterTabsDirection(width) {
 
     let tutorialTabGroup = document.querySelector('sl-tab-group');
@@ -57,7 +60,7 @@ function alterTabsDirection(width) {
     }
 }
 
-
+//swiper required logic.
 const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
@@ -85,6 +88,7 @@ const swiper = new Swiper('.swiper', {
 });
 
 
+// dialog required logic. this forces the popup at the start and allows the user to close it by either clicking on the background or the X
 const dialogSubscribe = document.querySelector('.dialog-subscribe');
 const dialogConfirm = document.querySelector('.dialog-added');
 const subscribeButton = dialogSubscribe.querySelector('form button');
