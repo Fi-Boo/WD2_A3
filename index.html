@@ -39,11 +39,14 @@
         </div>
     </header>
     <main class="centre">
+        <!-- static background with AILEY text that moves across the top & bottom-->
         <section id="section-background">
             <img src="images/ailey-logo-blk.png" />
             <img src="images/ailey-logo-blk.png" />
         </section>
-        <section id="test">
+
+        <!-- pop up dialog with subscription box -->
+        <section id="section-dialog">
         <sl-dialog label="" class="dialog-subscribe" open>
             Join our mailing list for updates on our products and guides!
             <form id="subscribe" action="">
@@ -54,17 +57,22 @@
         <sl-dialog label="" class="dialog-added">
             Your email has been successfully added to our mailing list. 
         </sl-dialog>
+        <!-- home page section -->
         <section id="section-home">
             <div id="home-text" class="container-max-width centre">
                 <h1>Your Lashes<br>
                 Your Way</h1>
+                <div class="updown-wrapper">
+                    <a href="#section-application" ><i class="fa-solid fa-chevron-down"></a></i>
+                </div>
             </div>
         </section>
+        <!-- application/tutorial section -->
         <section id="section-application">
             <div class="container-max-width centre">
                 <h2>Salon Quality Lashes in 6 Easy Steps!</h2>
 
-                <sl-tab-group class="tutorial-tabs">
+                <sl-tab-group class="tutorial-tabs" placement="top">
                     <sl-tab slot="nav" panel="step1">
                         <div class="container-thumbnail">
                             <img src="images/Step_1.png" alt="eye with no lashe extensions">
@@ -166,7 +174,7 @@
                 </sl-tab-group>
 
                 <div id="application-video" class="centre">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/w7Gdpxofh6c?si=-NAMH3ij82GWvND6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe  src="https://www.youtube.com/embed/w7Gdpxofh6c?si=-NAMH3ij82GWvND6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
@@ -181,7 +189,7 @@
                         <h3>THE STARTER</h3>
                         <span> For the new DIY Lasher</span>
                         <div class="range-image">
-                            <img src="" alt="">
+                            <img src="images/Ailey Lash Starter Kit.png" alt="Ailey DIY Lashes Starter Kit"/>
                         </div>
                         <span class="span-content">This kit comes with everythign required for 2 applications</span>
                         <table>
@@ -207,23 +215,65 @@
                         <h3>EXPANSIONS</h3>
                         <span> For Experienced DIYers who want a particular look</span>
                         <div class="range-expansion-images">
-                            <div class="range-image">
-                                <img src="images/Step_1.png" alt="eye with no lashe extensions">
+                            <div class="range-image2">
+                                <img src="images/Ailey Lash Cluster Kit.png" alt="Ailey DIY Lashes Cluster Kit">
                             </div>
-                            <div class="range-image">
-                                <img src="images/Step_2.png" alt="lash clusters in preparation of application">
-                            </div>
-                            <div class="range-image">
-                                <img src="images/Step_3.png" alt="application of bond agent to lashes via a lash brush">
-                            </div>
-                            <div class="range-image">
-                                <img src="images/Step_4.png" alt="lash cluster being placed on eye lashes">
-                            </div>
-                            <div class="range-image">
-                                <img src="images/Step_5.png" alt="clamping lash clusters onto the eye lashes with a the Application Tweezers">
-                            </div>
-                            <div class="range-image">
-                                <img src="images/Step_6.png" alt="application of sealant to lash clusters via lash brush">
+                            <div class="range-wrapper">
+                                <div class="range-image-expandable">
+                                    <div class="image-info-wrapper">
+                                        <image src="images/Doll_Eye.png" alt="dainty lash application image">
+                                        <p> Kit contains</p>
+                                        <ul>
+                                            <li> 50 x 10mm</li>
+                                            <li> 75 x 12mm</li>
+                                        </ul>
+                                    </div>
+                                    <h4>D A I N T Y</h4>
+                                </div>
+                                <div class="range-image-expandable">
+                                    <div class="image-info-wrapper">
+                                        <image src="images/Cat_Eye_.png" alt="foxy lash application image">
+                                        <p> Kit contains</p>
+                                        <ul>
+                                            <li> 50 x 10mm</li>
+                                            <li> 75 x 12mm</li>
+                                        </ul>
+                                    </div>
+                                    <h4>F O X Y</h4>
+                                </div>
+                                <div class="range-image-expandable">
+                                    <div class="image-info-wrapper">
+                                        <image src="images/Kitten_Eye.png" alt="classic lash application image">
+                                        <p> Kit contains</p>
+                                        <ul>
+                                            <li> 50 x 10mm</li>
+                                            <li> 75 x 12mm</li>
+                                        </ul>
+                                    </div>
+                                    <h4>C L A S S I C</h4>
+                                </div>
+                                <div class="range-image-expandable">
+                                    <div class="image-info-wrapper">
+                                        <image src="images/Cat_Eye_.png" alt="hustler lash application image">
+                                        <p> Kit contains</p>
+                                        <ul>
+                                            <li> 50 x 10mm</li>
+                                            <li> 75 x 12mm</li>
+                                        </ul>
+                                    </div>
+                                    <h4>H U S T L E R</h4>
+                                </div>
+                                <div class="range-image-expandable">
+                                    <div class="image-info-wrapper">
+                                        <image src="images/Doll_Eye.png" alt="diva lash application image">
+                                        <p> Kit contains</p>
+                                        <ul>
+                                            <li> 50 x 10mm</li>
+                                            <li> 75 x 12mm</li>
+                                        </ul>
+                                    </div>
+                                    <h4>D I V A</h4>
+                                </div>
                             </div>
                         </div>
                         <span class="span-content">These kits contain ONLY Lash Clusters</span>
