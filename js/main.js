@@ -30,13 +30,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     header.addEventListener("mouseover", () => {
         navBackground.style.top = '-4px';
-    })
+    });
 
     header.addEventListener("mouseout", () => {
         if (window.scrollY > 0) {
             navBackground.style.top = 'calc(var(--header-height) * -1)';
         }  
-    })
+    });
 
 });
 
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
 window.addEventListener("resize", () => {
 
     alterTabsDirection(window.innerWidth);
-})
+});
 
 
 // function that changes the tab placement for the tutorial tab panels based on screen width.
@@ -98,7 +98,3 @@ subscribeButton.addEventListener('click', () => {
     dialogConfirm.show();
 
 });
-
-const upDownArrow = document.querySelector('.updown-wrapper');
-
-upDownArrow.addEventListener
