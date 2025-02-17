@@ -3,6 +3,10 @@
 // I was having issues with it and a post suggested ensuring that all DOM content was loaded before running the logic.
 document.addEventListener("DOMContentLoaded", () => {
 
+    AOS.init();
+
+    setAOSoffset(80);
+
     alterTabsDirection(window.innerWidth);
 
     let navBackground = document.querySelector("#header-background");
@@ -45,9 +49,17 @@ document.addEventListener("DOMContentLoaded", () => {
 window.addEventListener("resize", () => {
 
     alterTabsDirection(window.innerWidth);
+    setAOSoffset(80);
 });
 
+function setAOSoffset(percent) {
+    let offset = document.documentElement.clientHeight * percent/-100;
+    let offsetElements = document.querySelectorAll('.AOS-offset-required');
 
+    offsetElements.forEach(element => {
+        element.setAttribute('data-aos-offset',offset)
+    });
+}
 // function that changes the tab placement for the tutorial tab panels based on screen width.
 function alterTabsDirection(width) {
 

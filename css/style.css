@@ -326,8 +326,6 @@ sl-dialog::part(panel) {
     overflow: hidden;
 }
 
-
-
 .tutorial-tabs::part(active-tab-indicator) {
     --indicator-color: none;
     height: 0;
@@ -342,6 +340,7 @@ sl-dialog::part(panel) {
     line-height: 2rem;
     min-height: fit-content;
     height: 16.5rem;
+    overflow-x: hidden;
 }
 
 .tutorial-table tr th {
@@ -413,12 +412,19 @@ iframe {
     box-shadow: 0px 0px 10px 10px rgb(1,1,1,0.5);
 }
 
-.section-bg img {
+.section-bg img, .section-bg2 img{
     position: absolute;
     opacity: 0.1;
-    height: 100vh;
+    height: 100vh;   
+}
+
+.section-bg img {
     transform: rotateY(180deg);
     right: -8%;
+}
+
+.section-bg2 img {
+    left: -8%;
 }
 
 
@@ -670,10 +676,6 @@ iframe {
     - use of shoelace switch for subscription toggle (brief requirement)
 */
 
-#section-contactus div img {
-    left: -8%;
-}
-
 #section-contactus {
     width: 100%;
     background: var(--color-beige);
@@ -814,6 +816,25 @@ button:hover {
     border: 2px solid var(--color-brown);
 }
 
+@media only screen and (max-width: 1280px) {
+    .range-expansion-images {
+        flex-direction: column;
+    }
+
+    .range-wrapper {
+        position: relative;
+        right: 0;
+    }
+
+    .range-image-expandable:hover {
+        width: 18rem;
+        box-shadow: 0px 0px 10px 10px var(--color-gold);
+        }
+
+    .image-info-wrapper {
+        width: 18rem;
+    }
+}
 
 @media only screen and (max-width: 800px) {
 
@@ -873,7 +894,7 @@ button:hover {
 
     .range-wrapper {
         gap: 0.5rem;
-        right: 3rem;
+        right: 1rem;
     } 
 
     .range-image-expandable {
@@ -900,6 +921,8 @@ button:hover {
         width: 50%;
     }
 }
+
+
 
 
 @media only screen and  (max-width: 400px) {
@@ -968,10 +991,6 @@ button:hover {
 
     sl-tab-panel::part(base) {
         height: 40rem;
-    }
-
-    .range-expansion-images {
-        flex-direction: column;
     }
 
     .range-wrapper {
