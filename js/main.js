@@ -57,7 +57,7 @@ function setAOSoffset(percent) {
     let offsetElements = document.querySelectorAll('.AOS-offset-required');
 
     offsetElements.forEach(element => {
-        element.setAttribute('data-aos-offset',offset)
+        element.setAttribute('data-aos-offset',`${offset}`);
     });
 }
 // function that changes the tab placement for the tutorial tab panels based on screen width.
